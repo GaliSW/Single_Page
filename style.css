@@ -72,6 +72,7 @@ body {
     height: 253px;
     margin-top: 50px;
     position: relative;
+    border: 1px solid red;
 }
 .account_info h1 {
     margin: 0;
@@ -100,16 +101,20 @@ body {
 }
 .account_info div {
     position: absolute;
-    width: 303px;
-    height: 113px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 320px;
+    height: 130px;
     background: rgba(255, 255, 255, 0.8);
     padding: 18px;
     font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.05em;
     color: rgba(79, 79, 79, 0.7);
-    right: 42px;
-    bottom: 37px;
+    right: 10px;
+    bottom: 10px;
 }
 
 /******************** contact ***********************/

@@ -1,13 +1,17 @@
 body {
     margin: 0 auto;
     padding: 0;
-    max-width: 600px;
+    width: 600px;
     font-family: "Noto Sans TC", sans-serif;
 }
 * {
     box-sizing: border-box;
 }
-
+@media (max-width: 600px) {
+    body {
+        width: 375px;
+    }
+}
 /******************** section1 ***********************/
 .logo {
     height: 80px;
@@ -42,7 +46,34 @@ body {
     font-size: 16px;
     line-height: 23px;
 }
-
+@media (max-width: 600px) {
+    .logo {
+        width: 375px;
+        height: 35px;
+    }
+    .banner {
+        position: relative;
+        width: 375px;
+    }
+    .banner img {
+        width: 100%;
+    }
+    .banner .banner_text h1 {
+        font-size: 65px;
+        line-height: 75px;
+        margin: 0;
+    }
+    .banner .banner_text h2 {
+        font-size: 32px;
+        line-height: 42px;
+        margin: 0;
+    }
+    .banner .banner_text h3 {
+        font-size: 16px;
+        line-height: 32px;
+        margin: 0;
+    }
+}
 /******************** messsage ***********************/
 .message {
     margin-top: 35px;
@@ -65,14 +96,25 @@ body {
     color: #4f4f4f;
     margin: 30px 0;
 }
-
+@media (max-width: 600px) {
+    .message {
+        margin-top: 35px;
+        padding: 0 20px;
+    }
+    .message_para {
+        font-size: 14px;
+    }
+    .message_list {
+        font-size: 14px;
+    }
+}
 /******************** account_info ***********************/
 .account_info {
     width: 100%;
     height: 253px;
     margin-top: 50px;
     position: relative;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 .account_info h1 {
     margin: 0;
@@ -116,7 +158,35 @@ body {
     right: 10px;
     bottom: 10px;
 }
-
+@media (max-width: 600px) {
+    .account_info {
+        width: 100%;
+        height: 200px;
+        margin-top: 80px;
+        position: relative;
+    }
+    .account_info h1 {
+        color: #000;
+        top: -80px;
+        left: 20%;
+        transform: translate(0%);
+    }
+    .account_info h2 {
+        color: #000;
+        text-shadow: none;
+        top: -40px;
+        left: 43%;
+    }
+    .account_info img {
+        width: 100%;
+        height: 200px;
+    }
+    .account_info div {
+        width: 232px;
+        height: 156px;
+        font-size: 14px;
+    }
+}
 /******************** contact ***********************/
 .contact {
     width: 100%;
@@ -189,7 +259,43 @@ body {
 .contact_blk .img2 {
     width: 80px;
 }
-
+@media (max-width: 600px) {
+    .contact h1 {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        color: #222222;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .B_blk {
+        width: calc(100% - 90px);
+    }
+    .contact_blk {
+        position: relative;
+        padding: 0 25px;
+    }
+    .contact_blk .img1 {
+        width: 70px;
+        height: 70px;
+        margin-top: 5px;
+        position: absolute;
+        bottom: -75px;
+        left: 110px;
+    }
+    .contact_blk .img2 {
+        width: 80px;
+        position: absolute;
+        bottom: -80px;
+        left: 190px;
+    }
+    .blk_b {
+        margin-bottom: 110px !important;
+    }
+}
 /******************** service ***********************/
 
 .service {
@@ -247,6 +353,93 @@ body {
     text-align: justify;
     color: #4f4f4f;
 }
+.service .service_600 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    color: #4f4f4f;
+}
+@media (max-width: 600px) {
+    .service {
+        background: linear-gradient(
+                0deg,
+                rgba(196, 196, 196, 0.5),
+                rgba(196, 196, 196, 0.5)
+            ),
+            #ffffff;
+        display: flex;
+        flex-direction: column;
+        height: 514px;
+        padding: 0px 40px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .service img {
+        position: absolute;
+        width: 146px;
+        bottom: 50px;
+        left: 40px;
+    }
+    .service .service_content {
+        width: 302px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    .service .service_content h1 {
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 60px;
+        line-height: 60px;
+        color: #222222;
+        margin: 0;
+    }
+    .service .service_content h2 {
+        position: absolute;
+        font-family: Noto Sans TC;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 22px;
+        margin: 0;
+        letter-spacing: 0.05em;
+        color: #222222;
+        left: 33%;
+        top: 65px;
+    }
+    .service .circle_pink {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        left: 165px;
+        top: 450px;
+        border-radius: 50%;
+        background: #f74769;
+    }
+    .service .service_content p {
+        /* width: 302px; */
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+        color: #4f4f4f;
+        margin: 0;
+    }
+    .service .service_600 {
+        /* border: 1px solid red; */
+        margin-left: 165px;
+        width: 140px;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+        color: #4f4f4f;
+        margin-top: 10px;
+    }
+}
 /******************** bonus ***********************/
 
 .bonus {
@@ -282,17 +475,85 @@ body {
     letter-spacing: 0.05em;
     color: #f74769;
 }
-.bonus .bonus_content p {
+.bonus .bonus_content p,
+.bonus .bonus_content span {
     font-weight: 300;
     font-size: 14px;
     line-height: 24px;
     text-align: justify;
     color: #4f4f4f;
 }
-.bonus .bonus_content p a {
+.bonus .bonus_content .para_600 {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: justify;
+    color: #4f4f4f;
+}
+.bonus .bonus_content .para_600 a {
     color: #000;
 }
-
+@media (max-width: 600px) {
+    .bonus {
+        margin-top: 50px;
+        display: flex;
+        height: 446px;
+        padding: 0 40px;
+        justify-content: flex-start;
+        align-items: top;
+        position: relative;
+        flex-direction: column;
+    }
+    .bonus .bonus_content {
+        width: 302px;
+        margin-right: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .bonus .bonus_content h1 {
+        font-family: Roboto;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 60px;
+        line-height: 60px;
+        color: #f74769;
+        margin: 0;
+    }
+    .bonus .bonus_content h2 {
+        font-family: Noto Sans TC;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 22px;
+        margin: 0;
+        letter-spacing: 0.05em;
+        color: #f74769;
+    }
+    .bonus .bonus_content p {
+        top: 60px;
+        position: absolute;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: justify;
+        color: #4f4f4f;
+    }
+    .bonus .bonus_content .para_600 {
+        width: 140px;
+        top: 110px;
+        position: absolute;
+    }
+    .bonus .bonus_content .para_600_1 {
+        bottom: 60px;
+        position: absolute;
+    }
+    .bonus img {
+        position: absolute;
+        width: 155px;
+        top: 110px;
+    }
+}
 /******************** payment ***********************/
 .payment {
     background-image: url("./images/pay.png");
@@ -382,7 +643,38 @@ body {
 .payment a {
     text-decoration: none;
 }
-
+@media (max-width: 600px) {
+    .payment {
+        background-image: url("./images/pay.png");
+        color: #fff;
+        text-align: center;
+        height: 709px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .payment .circle_wrapper {
+        margin-top: 45px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .payment .circle_blk {
+        margin-bottom: 10px;
+    }
+    .payment .payment_text {
+        font-family: Noto Sans TC;
+        width: 300px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        /* border: 1px solid red; */
+        margin: 0 auto;
+    }
+}
 /******************** statement ***********************/
 .statement {
     margin-top: 25px;
@@ -465,6 +757,55 @@ body {
     display: flex;
     align-items: center;
 }
+.statement .bottom_banner img {
+    width: 335px;
+    height: 262px;
+}
+@media (max-width: 600px) {
+    .statement {
+        padding: 0 20px;
+    }
+    .statement .focus_blk {
+        margin: 50px auto 0 auto;
+        width: 335px;
+        height: 114px;
+        border: 1px solid #222222;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #222222;
+        position: relative;
+    }
+    .statement .bottom_banner {
+        width: 335px;
+        height: 262px;
+        position: relative;
+        margin-top: 30px;
+    }
+    .statement .bottom_wrapper {
+        background-color: rgba(255, 255, 255, 0);
+        position: absolute;
+        width: 255px;
+        height: 150px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 40px;
+        text-align: right;
+        letter-spacing: 0.05em;
+        top: -25px;
+        right: 0;
+        display: flex;
+        align-items: center;
+    }
+    .statement .bottom_banner img {
+        width: 335px;
+    }
+}
 /******************** footer ***********************/
 footer {
     display: flex;
@@ -521,4 +862,18 @@ footer .copyright a {
 }
 footer .copyright a:hover {
     color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        background: #222222;
+        text-align: center;
+    }
+    footer .copyright {
+        font-size: 12px;
+        line-height: 20px;
+        color: rgba(79, 79, 79, 0.7);
+    }
 }
